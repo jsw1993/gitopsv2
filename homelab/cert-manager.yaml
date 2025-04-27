@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://charts.jetstack.io
     chart: cert-manager
-    targetRevision: v1.9.1  # specify the chart version
+    targetRevision: v1.17.2  # specify the chart version
     helm:
       valuesFiles:
         - homelab/values/cert-manager.yaml  # path to your values file in the Git repo
