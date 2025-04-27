@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    - repoURL: https://charts.jetstack.io
-      chart: cert-manager
-      targetRevision: v1.17.2  # specify the chart version
-      helm:
-        valuesFiles:
-          - homelab/values/cert-manager.yaml  # path to your values file in the Git repo
+    repoURL: https://charts.jetstack.io
+    chart: cert-manager
+    targetRevision: v1.17.2  # specify the chart version
+    helm:
+      valuesFiles:
+        - homelab/values/cert-manager.yaml  # path to your values file in the Git repo
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
