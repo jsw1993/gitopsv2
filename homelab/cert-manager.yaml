@@ -5,24 +5,17 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    - repoURL: git@github.com:jsw1993/gitopsv2.git
-      targetRevision: main
-      ref: values
-    - repoURL: https://charts.jetstack.io
-      chart: 
-      targetRevision: v1.17.1
-      helm:
-        releaseName: cert-manager
-        valueFiles:
-        - homelab/values/cert-manager.yaml
+  source:
+    repoURL: https://charts.jetstack.io
+    chart: cert-manager
+    targetRevision: v1.9.1  # specify the chart version
+    helm:
+      valuesFiles:
+        - homelab/values/cert-manager.yaml  # path to your values file in the Git repo
   destination:
-    server: "https://kubernetes.default.svc"
+    server: https://kubernetes.default.svc
     namespace: cert-manager
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-      - ServerSideApply=true
