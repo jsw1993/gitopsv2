@@ -11,7 +11,7 @@ spec:
     targetRevision: v1.17.2  # specify the chart version
     helm:
       valuesFiles:
-        - $values/homelab/values/cert-manager.yaml  # path to your values file in the Git repo
+        - ../values/cert-manager.yaml  # path to your values file in the Git repo
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
