@@ -6,20 +6,9 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL:
-      targetRevision: main
-      ref: values
-    - repoURL: https://charts.jetstack.io
-      chart: cert-manager
-      targetRevision: v1.17.2  # specify the chart version
-      helm:
-        valueFiles:
-        - $values/homelab/values/cert-manager.yaml
-        ignoreMissingValueFiles: false
-  sources:
-  - repoURL: 'https://prometheus-community.github.io/helm-charts'
-    chart: prometheus
-    targetRevision: 15.7.1
+  - repoURL: https://charts.jetstack.io
+    chart: cert-manager
+    targetRevision: v1.17.2
     helm:
       valueFiles:
       - $values/homelab/values/cert-manager.yaml
