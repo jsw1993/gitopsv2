@@ -11,7 +11,7 @@ spec:
       targetRevision: v1.17.2  # specify the chart version
       helm:
         valueFiles:
-        - $values/homelab/cert-manager/values.yaml
+        - $values/homelab/values/cert-manager.yaml
     - repoURL:  https://github.com/jsw1993/gitopsv2.git
       targetRevision: main
       ref: values
