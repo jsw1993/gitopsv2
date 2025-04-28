@@ -6,6 +6,9 @@ metadata:
 spec:
   project: default
   sources:
+    - repoURL:  https://github.com/jsw1993/gitopsv2.git
+      targetRevision: main
+      ref: values
     - repoURL: https://charts.jetstack.io
       chart: cert-manager
       targetRevision: v1.17.2  # specify the chart version
@@ -13,9 +16,6 @@ spec:
         valueFiles:
         - $values/homelab/values/cert-manager.yaml
         ignoreMissingValueFiles: false
-    - repoURL:  https://github.com/jsw1993/gitopsv2.git
-      targetRevision: main
-      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
