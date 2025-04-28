@@ -6,6 +6,8 @@ spec:
   acme:
     email: james@save-it.co.uk
     server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: account-private-key-secret
     solvers:
     - dns01:
         route53:
