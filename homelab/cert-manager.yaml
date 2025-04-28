@@ -12,7 +12,7 @@ spec:
       helm:
         valueFiles:
         - $values/homelab/values/cert-manager.yaml
-        ignoreMissingValueFiles: fale
+        ignoreMissingValueFiles: false
     - repoURL:  https://github.com/jsw1993/gitopsv2.git
       targetRevision: main
       ref: values
