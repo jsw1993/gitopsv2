@@ -4,13 +4,16 @@ metadata:
   name: save-it-aws
 spec:
   acme:
-    email: devops@intelligent-data-collection.com
+    email: james@save-it.co.uk
     server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: route53
-
     solvers:
     - dns01:
         route53:
-          hostedZoneID: Z2S4V27PZ8LJEF
+          hostedZoneID: Z00114353FRO5DCSYJTJ7
           region: eu-west-2
+          accessKeyIDSecretRef:
+            name: route53
+            key: key
+          secretAccessKeySecretRef:
+            name: route53
+            key: secret
