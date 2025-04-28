@@ -7,7 +7,7 @@ spec:
     email: devops@intelligent-data-collection.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: account-private-key-secret
+      name: route53
 
     solvers:
     - dns01:
