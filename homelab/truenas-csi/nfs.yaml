@@ -7,8 +7,8 @@ spec:
   project: default
   sources:
   - repoURL: https://terricain.github.io/truenas-scale-csi
-    chart: truenas-csi-driver
-    targetRevision: 1.1.0
+    chart: truenas-scale-csi
+    targetRevision: 1.2.0
     helm:
       valueFiles:
       - $values/homelab/values/truenas-csi-nfs.yaml
