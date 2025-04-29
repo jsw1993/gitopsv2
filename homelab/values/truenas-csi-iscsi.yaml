@@ -1,9 +1,8 @@
-values:
-  settings:
-    type: iscsi
-    url: https://truenas.lab.save-it.co.uk/api/v2.0
-    iscsiStoragePath: primary/iscsi
-    accessTokenSecretName: truenas-api-key
-    portalID: 1
-    enableDebugLogging: false
-    ignoreTLS: true
+settings:
+  type: iscsi
+  url: https://truenas.lab.save-it.co.uk/api/v2.0
+  iscsiStoragePath: primary/iscsi
+  accessTokenSecretName: truenas-api-key
+  portalID: 1
+  enableDebugLogging: false
+  ignoreTLS: true
