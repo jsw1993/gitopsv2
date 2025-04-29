@@ -16,3 +16,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  ignoreDifferences:
+  - group: ""
+    kind: Secret
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
