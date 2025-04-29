@@ -1,0 +1,7 @@
+  settings:
+    type: nfs
+    url: https://truenas.lab.save-it.co.uk/api/v2.0
+    nfsStoragePath: primary/nfs
+    accessTokenSecretName: truenas-api-key
+    enableDebugLogging: false
+    ignoreTLS: true
