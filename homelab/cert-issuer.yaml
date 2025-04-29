@@ -19,3 +19,5 @@ spec:
   ignoreDifferences:
   - group: ""
     kind: Secret
+    jsonPointers:
+      - /data 
