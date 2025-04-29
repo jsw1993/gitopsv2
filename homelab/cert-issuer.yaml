@@ -12,10 +12,10 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager  # Modify based on where you want to deploy
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   ignoreDifferences:
   - group: ""
     kind: Secret
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true

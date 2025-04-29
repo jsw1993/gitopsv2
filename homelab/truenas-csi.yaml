@@ -19,7 +19,3 @@ spec:
   ignoreDifferences:
   - group: ""
     kind: Secret
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
