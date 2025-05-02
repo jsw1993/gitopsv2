@@ -1,8 +1,7 @@
 apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
-  name: argo-cd
-  namespace: argo-cd
+  name: argocd
 spec:
   endpointSelector: {}
   ingress:
