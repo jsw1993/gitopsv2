@@ -1,0 +1,21 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: argo-cd
+  namespace: argo-cd
+spec:
+  endpointSelector: {}
+  ingress:
+    - fromEndpoints:
+        - {}
+  egress:
+    - toEndpoints:
+        - {}
+    - toFQDNs:
+        - matchPattern: "*.github.io"
+    - toFQDNs:
+        - matchName: charts.jetstack.io
+    - toFQDNs:
+        - matchName: github.com
+    - toEntities:
+        - kube-apiserver
