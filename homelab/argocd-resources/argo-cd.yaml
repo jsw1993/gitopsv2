@@ -7,6 +7,10 @@ spec:
   ingress:
     - fromEndpoints:
         - {}
+    - fromEndpoints:
+        - matchExpressions:
+            - key: reserved:ingress
+              operator: Exists
     - fromCIDRSet:
         - cidr: 172.16.50.0/24
   egress:
