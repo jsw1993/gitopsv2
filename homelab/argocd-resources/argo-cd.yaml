@@ -5,15 +5,10 @@ metadata:
 spec:
   endpointSelector: {}
   ingress:
+    - fromEndpoints:
+        - {}
     - fromCIDRSet:
         - cidr: 172.16.50.0/24
-    - fromEndpoints:
-        - matchLabels:
-            io.kubernetes.pod.namespace: argocd
-    - fromEndpoints:
-        - matchExpressions:
-            - key: reserved:ingress
-              operator: Exists
   egress:
     - toEndpoints:
         - {}
