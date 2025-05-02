@@ -7,6 +7,10 @@ spec:
   ingress:
     - fromEndpoints:
         - {}
+    - fromEndpoints:
+        - matchExpressions:
+            - key: reserved:ingress
+              operator: Exists
   egress:
     - toEndpoints:
         - {}
