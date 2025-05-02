@@ -11,8 +11,8 @@ spec:
         - matchExpressions:
             - key: reserved:ingress
               operator: Exists
-    - fromCIDR:
-        - 172.16.50.0/24
+    - fromCIDRSet:
+        - cidr: 172.16.50.0/24
   egress:
     - toEndpoints:
         - {}
